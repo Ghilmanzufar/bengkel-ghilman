@@ -141,15 +141,22 @@ const ProductListing = () => {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
+                    dots: true,
+                    arrows: false,
                 },
             },
         ],
+        appendDots: (dots) => (
+            <div style={{ position: "relative", bottom: "10px" }}>
+                <ul style={{ margin: "0px", padding: "10px" }}> {dots} </ul>
+            </div>
+        ),
     };
 
     return (
         <Section className="py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                <h1 className="text-3xl font-bold text-center text-white mb-8">Featured Products</h1>
+                <h1 className="text-3xl font-bold text-center text-white mb-8">Produk Rekomendasi</h1>
                 <Slider {...settings}>
                     {products.map((product) => (
                         <div key={product.id} className="p-2">
@@ -163,6 +170,18 @@ const ProductListing = () => {
 };
 const Section = styled.section`
     background: radial-gradient(circle at center, #3A4750 10%, #222831 80%);
+
+    padding-bottom: 50px; // Beri ruang ekstra agar pagination tidak tertutup
+
+    .slick-dots {
+        bottom: -30px !important; // Naikkan posisi pagination agar tetap terlihat
+    }
+
+    @media (max-width: 480px) {
+        .slick-dots {
+            bottom: -15px !important;
+        }
+    }
 `;
 
 export default ProductListing;

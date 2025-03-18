@@ -16,8 +16,8 @@ const Card = ({ title, link, image }) => {
 const StyledWrapper = styled.div`
     .card {
         position: relative;
-        width: 11.875em;
-        height: 16.5em;
+        width: 14.875em;
+        height: 17.5em;
         box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
         cursor: pointer;
         transition: all 120ms;
@@ -31,6 +31,9 @@ const StyledWrapper = styled.div`
         text-align: center;
         text-decoration: none;
         border-radius: 8px;
+        max-width: 100%;
+        max-height: 100%;
+
     }
 
     .card:hover {

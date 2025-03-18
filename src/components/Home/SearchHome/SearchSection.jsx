@@ -15,7 +15,7 @@ const SearchSection = () => {
 };
 
 const Section = styled.section`
-    height: 60vh;
+    height: 50vh;
     background: url(${bgImage});
     background-size: cover;
     background-position: center;
@@ -24,6 +24,9 @@ const Section = styled.section`
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 0 1rem;
+
+    
 `;
 
 const Content = styled.div`
