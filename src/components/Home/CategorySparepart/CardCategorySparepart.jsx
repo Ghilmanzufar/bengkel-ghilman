@@ -16,9 +16,9 @@ const Card = ({ title, link, image }) => {
 const StyledWrapper = styled.div`
     .card {
         position: relative;
-        width: 14.875em;
-        height: 17.5em;
-        box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+        width: 10em; /* Ukuran lebih kecil */
+        height: 12em; /* Sesuaikan tinggi */
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
         cursor: pointer;
         transition: all 120ms;
         display: flex;
@@ -26,14 +26,12 @@ const StyledWrapper = styled.div`
         justify-content: center;
         background: #EEEEEE;
         color: white;
-        padding: 0.5em;
-        padding-bottom: 3.4em;
+        padding: 0.3em;
+        padding-bottom: 2em;
         text-align: center;
         text-decoration: none;
         border-radius: 8px;
         max-width: 100%;
-        max-height: 100%;
-
     }
 
     .card:hover {
@@ -43,9 +41,9 @@ const StyledWrapper = styled.div`
 
     .card .title {
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 0.9em;
+        font-size: 0.8em; /* Ukuran font lebih kecil */
         position: absolute;
-        bottom: 1.5em;
+        bottom: 1em;
         font-weight: bold;
         color: black;
     }
@@ -55,8 +53,6 @@ const StyledWrapper = styled.div`
         height: 100%;
         background-size: cover;
         background-position: center;
-        display: grid;
-        place-items: center;
         border-radius: 8px;
     }
 `;

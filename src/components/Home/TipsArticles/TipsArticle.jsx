@@ -15,11 +15,11 @@ const Card = ({ title, description, image }) => {
         <div className="relative flex flex-col w-full max-w-xs mx-auto rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
             <img src={image} alt={title} className="w-full h-40 object-cover rounded-t-xl" />
             <div className="p-4">
-                <h5 className="text-lg font-semibold text-gray-900">{title}</h5>
+                <h5 className="text-sm font-semibold text-gray-900">{title}</h5>
                 <p className="text-sm text-gray-700 mt-2">{description}</p>
             </div>
             <div className="p-4 pt-0">
-                <button className="w-full px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-all">
+                <button className="w-full text-sm px-2 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all">
                     Baca Selengkapnya
                 </button>
             </div>
@@ -29,10 +29,10 @@ const Card = ({ title, description, image }) => {
 
 const TipsArticlesSection = () => {
     const articles = [
-        { id: 1, title: '5 Tips Merawat Mesin Motor', description: 'Pelajari cara merawat mesin motor.', image: merawat},
-        { id: 2, title: 'Cara Menghemat ', description: 'Tips efisiensi bahan bakar.', image: hemat },
-        { id: 3, title: 'Modifikasi Velg', description: 'Panduan memilih velg terbaik.', image: velg },
-        { id: 4, title: 'Pentingnya Servis Kendaraan', description: 'Mengapa servis berkala penting.', image: servis },
+        { id: 1, title: '5 Tips Merawat Mesin Motor', description: '', image: merawat},
+        { id: 2, title: 'Cara Menghemat ', description: '', image: hemat },
+        { id: 3, title: 'Modifikasi Velg', description: '', image: velg },
+        { id: 4, title: 'Pentingnya Servis Kendaraan', description: '', image: servis },
     ];
 
     const settings = {
@@ -52,7 +52,7 @@ const TipsArticlesSection = () => {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             },

@@ -103,14 +103,14 @@ const ProductCard = ({ product }) => {
                 </button>
             </div>
             <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">{product.name}</h3>
-                <p className="text-sm text-gray-600 mb-3">{product.description}</p>
+                <h3 className="text-sm sm:text-sm md:text-sm font-semibold text-gray-800 mb-2">{product.name}</h3>
+                <p className="text-sm sm:text-xs md:text-xs text-gray-600 mb-3">{product.description}</p>
                 <div className="flex items-center justify-between">
-                    <span className="text-xl font-bold text-blue-600">Rp. {product.price}</span>
-                    <button className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
-                        <FiShoppingCart className="w-5 h-5" />
-                        Tambahkan Keranjang
-                    </button>
+                    <span className="text-sm sm:text-lg md:text-sm font-bold text-blue-600 m-1">Rp. {product.price}</span>
+                        <button className="flex items-center text-sm gap-2 bg-blue-600 text-white px-1 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+                            <FiShoppingCart className="w-5 h-5 " />
+                            Tambahkan Keranjang
+                        </button>
                 </div>
             </div>
         </div>
@@ -140,7 +140,7 @@ const ProductListing = () => {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     dots: true,
                     arrows: false,
                 },
