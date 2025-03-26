@@ -76,11 +76,11 @@ const ProductListingPage = () => {
             <h3 className="text-lg font-semibold line-clamp-2">{product.title}</h3>
             <div className="mt-2 flex items-center gap-2">
             <span className="text-2xl font-bold text-blue-600">
-                ${product.price}
+                Rp {product.price}
             </span>
             {product.originalPrice > product.price && (
                 <span className="text-sm text-red-600 line-through">
-                ${product.originalPrice}
+                Rp {product.originalPrice}
                 </span>
             )}
             </div>
@@ -130,8 +130,8 @@ const ProductListingPage = () => {
                     className="w-full"
                 />
                 <div className="flex justify-between mt-2">
-                    <span>${priceRange[0]}</span>
-                    <span>${priceRange[1]}</span>
+                    <span>Rp {priceRange[0]}</span>
+                    <span>RP {priceRange[1]}</span>
                 </div>
                 </div>
 

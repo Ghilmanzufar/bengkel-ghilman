@@ -109,11 +109,11 @@ const BookingHistoryTable = () => {
           <h2 className="text-2xl font-bold text-gray-800 mb-4 sm:mb-0">Booking History</h2>
           <div className="flex space-x-4">
             <div className="relative">
-              <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black" />
               <input
                 type="text"
                 placeholder="Search bookings..."
-                className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="pl-10 pr-4 py-2 border text-black border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />

@@ -95,7 +95,7 @@ const CheckoutPage = () => {
                     />
                     <div className="flex-1 ml-4">
                         <h3 className="font-medium">{item.name}</h3>
-                        <p className="text-gray-600">${item.price}</p>
+                        <p className="text-gray-600">Rp  {item.price}</p>
                     </div>
                     <div className="flex items-center">
                         <input
@@ -160,7 +160,7 @@ const CheckoutPage = () => {
                         <option value="">Select Provider</option>
                         {shippingProviders.map(provider => (
                         <option key={provider.name} value={provider.name}>
-                            {provider.name} (${provider.cost})
+                            {provider.name} (Rp  {provider.cost})
                         </option>
                         ))}
                     </select>
@@ -175,25 +175,25 @@ const CheckoutPage = () => {
                 <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                     <button
-                        className={`p-4 border rounded-lg flex items-center ${paymentMethod === 'bank' ? 'border-blue-500 bg-blue-50' : ''}`}
+                        className={`p-4 border rounded-lg flex items-center Rp {paymentMethod === 'bank' ? 'border-blue-500 bg-blue-50' : ''}`}
                         onClick={() => setPaymentMethod('bank')}
                     >
                         <BsBank className="mr-2" /> Bank Transfer
                     </button>
                     <button
-                        className={`p-4 border rounded-lg flex items-center ${paymentMethod === 'ewallet' ? 'border-blue-500 bg-blue-50' : ''}`}
+                        className={`p-4 border rounded-lg flex items-center Rp {paymentMethod === 'ewallet' ? 'border-blue-500 bg-blue-50' : ''}`}
                         onClick={() => setPaymentMethod('ewallet')}
                     >
                         <FaWallet className="mr-2" /> E-Wallet
                     </button>
                     <button
-                        className={`p-4 border rounded-lg flex items-center ${paymentMethod === 'card' ? 'border-blue-500 bg-blue-50' : ''}`}
+                        className={`p-4 border rounded-lg flex items-center Rp {paymentMethod === 'card' ? 'border-blue-500 bg-blue-50' : ''}`}
                         onClick={() => setPaymentMethod('card')}
                     >
                         <FaCreditCard className="mr-2" /> Credit/Debit Card
                     </button>
                     <button
-                        className={`p-4 border rounded-lg flex items-center ${paymentMethod === 'cod' ? 'border-blue-500 bg-blue-50' : ''}`}
+                        className={`p-4 border rounded-lg flex items-center Rp {paymentMethod === 'cod' ? 'border-blue-500 bg-blue-50' : ''}`}
                         onClick={() => setPaymentMethod('cod')}
                     >
                         <FaMoneyBill className="mr-2" /> Cash on Delivery
@@ -221,20 +221,20 @@ const CheckoutPage = () => {
                 <div className="space-y-3">
                     <div className="flex justify-between">
                     <span>Subtotal</span>
-                    <span>${calculateSubtotal().toFixed(2)}</span>
+                    <span>Rp {calculateSubtotal().toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between">
                     <span>Tax (10%)</span>
-                    <span>${calculateTax().toFixed(2)}</span>
+                    <span>Rp {calculateTax().toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between">
                     <span>Shipping</span>
-                    <span>${getShippingCost().toFixed(2)}</span>
+                    <span>Rp {getShippingCost().toFixed(2)}</span>
                     </div>
                     <div className="border-t pt-3">
                     <div className="flex justify-between font-semibold">
                         <span>Total</span>
-                        <span>${calculateTotal().toFixed(2)}</span>
+                        <span>Rp {calculateTotal().toFixed(2)}</span>
                     </div>
                     </div>
 

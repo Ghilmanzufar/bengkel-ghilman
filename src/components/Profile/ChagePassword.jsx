@@ -17,15 +17,15 @@ const ChangePassword = () => {
     };
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-grey-500 to-sky-100">
             <div className="bg-white shadow-lg rounded-2xl p-8 max-w-lg w-full">
                 <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Ubah Password</h2>
                 <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
+                    <div className="mb-4 text-black">
                         <label className="block text-gray-600 font-medium mb-1">Password Lama</label>
                         <input
                             type="password"
-                            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300"
+                            className="w-full text-black p-3 border rounded-lg focus:ring focus:ring-blue-300"
                             value={oldPassword}
                             onChange={(e) => setOldPassword(e.target.value)}
                             required
@@ -35,7 +35,7 @@ const ChangePassword = () => {
                         <label className="block text-gray-600 font-medium mb-1">Password Baru</label>
                         <input
                             type="password"
-                            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300"
+                            className="w-full p-3 border rounded-lg text-black focus:ring focus:ring-blue-300"
                             value={newPassword}
                             onChange={(e) => setNewPassword(e.target.value)}
                             required
@@ -45,7 +45,7 @@ const ChangePassword = () => {
                         <label className="block text-gray-600 font-medium mb-1">Konfirmasi Password Baru</label>
                         <input
                             type="password"
-                            className="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300"
+                            className="w-full p-3 border rounded-lg text-black focus:ring focus:ring-blue-300"
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
                             required

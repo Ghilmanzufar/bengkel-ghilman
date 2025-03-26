@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { FiEye, FiEyeOff, FiUser, FiMail, FiLock } from "react-icons/fi";
 import { FaGoogle, FaGithub, FaLinkedin } from "react-icons/fa";
 
+
 const RegistrationForm = () => {
     const [formData, setFormData] = useState({
         fullName: "",
@@ -77,7 +78,7 @@ const RegistrationForm = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-cyan-50 to-sky-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+        <div className="min-h-screen bg-gradient-to-br from-grey-500 to-sky-100 py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
         <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-[1.01]">
             <div className="text-center">
             <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Create your account</h2>
@@ -95,7 +96,7 @@ const RegistrationForm = () => {
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleInputChange}
-                    className={`block w-full pl-10 pr-3 py-2 border ${errors.fullName ? 'border-red-300' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+                    className={`block w-full pl-10 pr-3 py-2 border text-black ${errors.fullName ? 'border-red-300' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
                     placeholder="Full Name"
                 />
                 {errors.fullName && <p className="mt-1 text-sm text-red-500">{errors.fullName}</p>}
@@ -110,7 +111,7 @@ const RegistrationForm = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className={`block w-full pl-10 pr-3 py-2 border ${errors.email ? 'border-red-300' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+                    className={`block w-full text-black pl-10 pr-3 py-2 border ${errors.email ? 'border-red-300' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
                     placeholder="Email address"
                 />
                 {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
@@ -125,7 +126,7 @@ const RegistrationForm = () => {
                     name="password"
                     value={formData.password}
                     onChange={handleInputChange}
-                    className={`block w-full pl-10 pr-10 py-2 border ${errors.password ? 'border-red-300' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+                    className={`block w-full pl-10 pr-10 py-2 text-black border ${errors.password ? 'border-red-300' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
                     placeholder="Password"
                 />
                 <button
@@ -147,7 +148,7 @@ const RegistrationForm = () => {
                     name="confirmPassword"
                     value={formData.confirmPassword}
                     onChange={handleInputChange}
-                    className={`block w-full pl-10 pr-10 py-2 border ${errors.confirmPassword ? 'border-red-300' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+                    className={`block w-full text-black pl-10 pr-10 py-2 border ${errors.confirmPassword ? 'border-red-300' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
                     placeholder="Confirm Password"
                 />
                 <button
@@ -213,5 +214,7 @@ const RegistrationForm = () => {
         </div>
     );
 };
+
+
 
 export default RegistrationForm;
